@@ -17,7 +17,7 @@ function saveBookmark(e) {
     phone : sitePhone,
     male : siteMale,
     female : siteFemale,
-    mes: siteMes
+    mes : siteMes
   }
   if (localStorage.getItem('infos') === null) {
     var infos = [];
@@ -62,6 +62,7 @@ function fetchInfos() {
     var male = info[i].male;
     var female = info[i].female;
     var mes = infos[i].mes;
+    console.log(name);
     str += '<table>'
       + `<tr style="width : 100%">`
       + `<th style="width : 17.5%">`
