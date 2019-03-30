@@ -10,6 +10,12 @@ function saveBookmark(e) {
   var siteFemale = document.querySelector('#demo-priority-female').value;
   var siteMes = document.querySelector('#message').value;
 
+//   if(siteMale === on){
+//     siteMale = male;
+//   }else{
+//     siteMale = female;
+//   }
+
   var info = {
     name: siteName,
     mail: siteEmail,
@@ -17,7 +23,8 @@ function saveBookmark(e) {
     phone : sitePhone,
     male : siteMale,
     female : siteFemale,
-    mes : siteMes
+    mes : siteMes,
+    gender : siteMale
   }
   if (localStorage.getItem('infos') === null) {
     var infos = [];
@@ -57,28 +64,32 @@ function fetchInfos() {
   for (var i = 0; i < infos.length; i++) {
     var name = infos[i].name;
     var email = infos[i].mail;
-    var sub = info[i].sub;
-    var phone = info[i].phone;
-    var male = info[i].male;
-    var female = info[i].female;
+    var sub = infos[i].sub;
+    var phone = infos[i].phone;
+    var male = infos[i].male;
+    var female = infos[i].female;
     var mes = infos[i].mes;
-    console.log(name);
+    console.log(male);
+    console.log(female);
     str += '<table>'
       + `<tr style="width : 100%">`
       + `<th style="width : 17.5%">`
-      + `<h1>Name</h1>`
+      + `<h3>Name</h3>`
       + `</th>`
       + `<th style="width : 17.5%">`
-      + `<h1>Email</h1>`
+      + `<h3>Email</h3>`
       + `</th>`
       + `<th style="width : 15%">`
-      + `<h1>Phone</h1>`
+      + `<h3>Subject</h3>`
       + `</th>`
-      + `<th style="width : 10%">`
-      + `<h1>Gender</h1>`
+      + `<th style="width : 15%">`
+      + `<h3>Phone</h3>`
       + `</th>`
+    //   + `<th style="width : 10%">`
+    //   + `<h3>Gender</h3>`
+    //   + `</th>`
       + `<th style="width : 25%">`
-      + `<h1>Message</h1>`
+      + `<h3>Message</h3>`
       + `</th>`
       + `</tr>`
       + `<div id="infosResults">`
@@ -87,8 +98,8 @@ function fetchInfos() {
       + `<th style="width : 17.5%" id="outmail">${email}</th>`
       + `<th style="width : 15%" id="outsub">${sub}</th>`
       + `<th style="width : 15%" id="outphone">${phone}</th>`
-      + `<th style="width : 10%" id="outgender">${gender}</th>`
-      + `<th style="width : 40%" id="outmes">${mes}	</th>`
+    //   + `<th style="width : 10%" id="outgender">${gender}</th>`
+      + `<th style="width : 15%" id="outmes">${mes}	</th>`
       + `<th style="width : 10%"><a onclick="deleteBookmark('${name}','${email}')" class="btn btn-danger">Delete</a></th>`
       +`</tr></div>`
   }
