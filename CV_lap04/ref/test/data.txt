@@ -1,2 +1,0 @@
-
- What a wonderful Asynchronous operation.
