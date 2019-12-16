@@ -1,4 +1,49 @@
 // JavaScript Document
+ let test = document.querySelector('.modal-content');   //sent data to pop up class
+
+function demo01(){
+    test.innerHTML = `
+            <div class="container">
+                <div class="portfolio-padding">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>44Geschäfts Eines<br /> Web-Studios</h2>
+                        <div class="h-50"></div>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                        <br />
+                        <br /> <img src="img/portfolio/02.jpg" alt="" class="img-responsive" />
+                        <br />
+                        <br />
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                        <br />
+                        <br /> </div>
+                </div>
+            </div>`;
+    console.log("1success!!!");
+}
+
+function demo02(){
+    test.innerHTML = `
+    <div class="container">
+                <div class="portfolio-padding">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>55Geschäfts Eines<br /> Web-Studios</h2>
+                        <div class="h-50"></div>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                        <br />
+                        <br /> <img src="img/portfolio/02.jpg" alt="" class="img-responsive" />
+                        <br />
+                        <br />
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                        <br />
+                        <br /> </div>
+                </div>
+            </div>`;
+    console.log("2success!!!");
+}
 
 $(window).load(function () {
     "use strict";
@@ -104,9 +149,7 @@ $(document).ready(function () {
     });
 
     //animatedModal
-    $("#demo01,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
-
-    $("#demo02").animatedModal02();
+    $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
 
     // Contact Form 	
 
